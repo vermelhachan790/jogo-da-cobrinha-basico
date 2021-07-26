@@ -100,9 +100,38 @@ int main()
 				}
 				if (score == 2)
 				{
-					fodPos[0] = fodPos[0] +5;
+					fodPos[0] = fodPos[0] +2;
 					fodPos[1] = fodPos[1] +20;
 				}
+					if (score == 3)
+				{
+					fodPos[0] = fodPos[0] +0;
+					fodPos[1] = fodPos[1] +9;                    printf("%c",food);
+				}
+					if (score == 4)
+				{
+					fodPos[0] = fodPos[0] +3;
+					fodPos[1] = fodPos[1] +3;
+				    printf("%c",food);
+				}
+					if (score == 5)
+				{
+					fodPos[0] = fodPos[0] -2;
+					fodPos[1] = fodPos[1] +1;
+			     	    printf("%c",food);
+					}
+					if (score == 6)
+				{  
+				
+				     while ((key == getch())!='q')
+				     {
+				     	clrscr();
+				     	textcolor(LIGHTGREEN);
+				     	printf("Voce venceu!");
+				     	
+				     }
+				}
+			
 			}
 		}
 
@@ -126,14 +155,27 @@ int main()
 			x++;
 			vdd = 4;
 			textcolor(RED);
-			printf(">");
+				printf(">");
 			textcolor(BLUE);
 
+			if (score > 0)
+			{
+				textcolor(RED);
+				printf(">");
+				textcolor(BLUE);
+			}
+		
 			break;
 		case 's':
 			vdd = 5;
 			textcolor(RED);
 			printf("<");
+				if (score > 0)
+			{
+				textcolor(RED);
+				printf("<");
+				textcolor(BLUE);
+			}
 			textcolor(BLUE);
 			x--;
 			break;
